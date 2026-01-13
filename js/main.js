@@ -45,22 +45,36 @@ function openModal(text, type = "success") {
   modal.classList.add('active');
 }
 
-sendBtn.addEventListener('click', () => {
-    const mail = mailInput.value;
-    const name = nameInput.value;
-    const message = messageInput.value;
-    if(mail && name && message){
-       openModal("Cita agendada correctamente");
-        mailInput.value = '';
-        nameInput.value = '';
-        messageInput.value = '';
-    } else {
-        openModal("Por favor completa todos los campos", "error");
-    }
-});
+ emailjs.init("hKvsoyYx4TFw_MRmU");
+
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs
+        .sendForm(
+          "service_0tf56yt",
+          "template_s3wwcqe",
+          this
+        )
+        .then(() => {
+          openModal("Solicitud enviada correctamente");
+          this.reset();
+        })
+        .catch(() => {
+          openModal("Error al enviar la solicitud");
+        });
+    });
+
 
 resetBtn.addEventListener('click', () => {
     mailInput.value = '';
     nameInput.value = '';
     messageInput.value = '';
 });
+
+
+
+
+ 

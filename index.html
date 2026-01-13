@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/IconoWeb.svg" type="image/svg+xml">
     <title>ReparacionesGustavo</title>
     <link rel="stylesheet" href="/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
@@ -103,25 +104,40 @@
                 <h1>¿Listo para reparar tu equipo?</h1>
                 <p>Contáctanos hoy mismo y descubre cómo podemos ayudarte a solucionar tus problemas tecnológicos de
                     manera rápida y eficiente.</p>
-                <div class="list"><img src="/assets/Done.svg" alt=""> <p>Seguro</p></div>
-                <div class="list"><img src="/assets/Done.svg" alt=""> <p> Eficiente</p></div>
-                <div class="list"><img src="/assets/Done.svg" alt=""> <p> Garantizado </p></div>
+                <div class="list"><img src="/assets/Done.svg" alt="">
+                    <p>Seguro</p>
+                </div>
+                <div class="list"><img src="/assets/Done.svg" alt="">
+                    <p> Eficiente</p>
+                </div>
+                <div class="list"><img src="/assets/Done.svg" alt="">
+                    <p> Garantizado </p>
+                </div>
 
             </div>
             <div class="form-container">
-                <div class="form">
-                    <span class="heading">Contactanos</span>
-                    <input placeholder="Nombre" type="text" class="input" id="name" required>
-                    <input placeholder="Email" id="mail" type="email" class="input" required>
+                <form class="form" id="contactForm">
+                    <span class="heading">Contáctanos</span>
+
+                    <input placeholder="Nombre" type="text" class="input" id="name" name="name" required>
+
+                    <input placeholder="Email" id="mail" name="email" type="email" class="input" required>
+
                     <textarea placeholder="Explica tu caso" rows="10" cols="30" id="message" name="message"
                         class="textarea" required></textarea>
+
                     <div class="button-container">
-                        <div class="send-button" id="sendbtn">Enviar solicitud</div>
+                        <button type="submit" class="send-button" id="sendbtn">
+                            Enviar solicitud
+                        </button>
+
                         <div class="reset-button-container">
-                            <div id="reset-btn" class="reset-button">Reset</div>
+                            <button type="reset" class="reset-button">
+                                Reset
+                            </button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
 
         </section>
@@ -157,5 +173,6 @@
     </main>
 </body>
 <script src="/js/main.js" defer></script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
 </html>
