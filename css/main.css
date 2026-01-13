@@ -3,6 +3,10 @@ body {
     background-color: #f6f7f8;
 }
 
+html{
+    scroll-behavior: smooth ;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -174,6 +178,7 @@ body {
 .logo img{
     width: 30px;
     height: 30px;
+    object-fit: contain;
 }
 
 .card .logo{
@@ -329,6 +334,8 @@ body {
 }
 /*FORMULARIO*/
 
+
+
 footer{
     padding-top: 4rem;
     background-color: white;
@@ -343,13 +350,12 @@ footer .data{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 10px;
 }
 
 footer .copy{
     color: #555b61;
-    font-size: 0.9rem;
+    font-size: x-small;
     margin-bottom: 1rem;
 }
 
@@ -364,7 +370,52 @@ footer .copy{
 span.footer{
     color: #137fec;
     font-weight: bold;
+    font-size: small;
 }
+
+.footerlist p{
+    color: #555b61;
+    margin: 0;
+    font-size: smaller;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #0d6efd;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
 @media (min-width: 768px) {
     .menu {
         position: static;
@@ -468,10 +519,15 @@ span.footer{
 footer .data{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     gap: 25px;
     width: 100%;
+}
+
+.footerlist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 }

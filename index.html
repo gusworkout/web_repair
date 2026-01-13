@@ -26,7 +26,6 @@
         <nav class="menu">
             <button class="close-btn">✕</button>
 
-            <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
             <a href="#agendar" class="agendarCita">Agendar cita</a>
@@ -45,7 +44,7 @@
             </div>
         </section>
 
-        <section class="expertise_section">
+        <section class="expertise_section" id="servicios">
             <div class="text_content">
                 <h1>Servicios de Ingeniería de Precisión</h1>
                 <p>Nos especializamos en diagnósticos confiables y de alta calidad, además, la restauración de
@@ -99,7 +98,7 @@
             </div>
         </section>
 
-        <section class="contactform">
+        <section class="contactform" id="contacto">
             <div class="publucity">
                 <h1>¿Listo para reparar tu equipo?</h1>
                 <p>Contáctanos hoy mismo y descubre cómo podemos ayudarte a solucionar tus problemas tecnológicos de
@@ -109,43 +108,51 @@
             <div class="form-container">
                 <div class="form">
                     <span class="heading">Contactanos</span>
-                    <input placeholder="Nombre" type="text" class="input">
-                    <input placeholder="Email" id="mail" type="email" class="input">
+                    <input placeholder="Nombre" type="text" class="input" id="name" required>
+                    <input placeholder="Email" id="mail" type="email" class="input" required>
                     <textarea placeholder="Explica tu caso" rows="10" cols="30" id="message" name="message"
-                        class="textarea"></textarea>
+                        class="textarea" required></textarea>
                     <div class="button-container">
-                        <div class="send-button">Enviar solicitud</div>
+                        <div class="send-button" id="sendbtn">Enviar solicitud</div>
                         <div class="reset-button-container">
                             <div id="reset-btn" class="reset-button">Reset</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
+        </section>
+        <div class="modal-overlay" id="modal">
+            <div class="modal">
+                <h2>Notificación</h2>
+                <p id="modal-message">Mensaje aquí</p>
+
+                <button id="closeModal">Aceptar</button>
+            </div>
+        </div>
         <footer>
             <div class="data">
                 <div class="footerlist">
                     <span class="footer">Compañia</span>
-                    <span>ReparacionesGustavo</span>
+                    <p>ReparacionesGustavo</p>
                 </div>
                 <div class="footerlist">
                     <span class="footer">Servicios</span>
                     <p>Laptops</p>
-                    <p>Datos</p>
+                    <p>Pc</p>
                     <p>Consolas</p>
                 </div>
                 <div class="footerlist">
                     <span class="footer">Ubicación</span>
-                    <span>Valledupar, Cesar - Colombia</span>
+                    <p>Colombia, Valledupar-Cesar</p>
                 </div>
-                </div>
-           <p class="copy" >&copy; 2026 ReparacionesGustavo. Todos los derechos reservados.</p>
+            </div>
+            <p class="copy">&copy; 2026 ReparacionesGustavo. Todos los derechos reservados.</p>
         </footer>
+
 
     </main>
 </body>
 <script src="/js/main.js" defer></script>
-
 
 </html>
